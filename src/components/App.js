@@ -11,10 +11,17 @@ function App() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
   }
 
+  const addItem = (newItem) => {
+    setItems((currentItems) => {
+      return [...currentItems, newItem]
+      //same as setItems(items => [...items, newItem])
+    })
+  }
+
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      <ShoppingList items={items} />
+      <ShoppingList items={items} addItem={addItem} />
     </div>
   );
 }
