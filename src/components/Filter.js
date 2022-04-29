@@ -3,7 +3,7 @@ import React from "react";
 function Filter({ onCategoryChange, onSearchChange, search }) {
   return (
     <div className="Filter">
-      <input onChange={onsearchChange} 
+      <input onChange={onSearchChange} 
       type="text" 
       name="search" 
       placeholder="Search..." 
